@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <p><a href='/login'>Login</a>|<a href='/signup'>Signup</a>|<a href='/newpost'>Add blog entry</a>|<a href='/logout'>Logout</a>|<a href='/blog'>Blogs</a></p>
+        
+        <title>{{Title}}</title>
+
+        {% with messages = get_flashed_messages() %}
+            <ul>
+                {% for message in messages %}
+                    <li>{{message}}</li>
+                {% endfor %}
+            </ul>
+        {% endwith %}
+        <style>
+            label {
+                display:inline-block;
+            }
+        </style>
+    </head>
+<body>
+
+    {% block content %}
+    
+    {% endblock %}
+
+</body>
+</html>
